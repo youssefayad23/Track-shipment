@@ -148,7 +148,7 @@ function Progress({ shipmentData }) {
           <p>{t('shipmentCreated')}</p>
           <p>{t('shipmentReceivedFromMerchant')}</p>
           <p className="outForDeliveryP">
-            {t('shipmentOutForDelivery')}{' '}
+            {t('shipmentOutForDelivery')}
             <span className={classNameState}>
               {shipmentState === 'CANCELLED'
                 ? t('shipmentCancelledByMerchant')
@@ -157,7 +157,7 @@ function Progress({ shipmentData }) {
                 : ''}
             </span>
           </p>
-          <p style={i18next.language === 'ar' ?{ marginRight: 'auto' }  : { marginLeft: 'auto' }}>{t('delivered')}</p>
+          <p >{t('delivered')}</p>
         </div>
       </div>
     </div>

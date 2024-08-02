@@ -57,6 +57,7 @@
     border-radius: 10px 10px 0 0;
     border-bottom: 0;
     padding: 15px;
+    background: #ffffff;
 }
 
 .trackShipmentSearch {
@@ -111,4 +112,51 @@
     background-color: rgb(89%, 2%, 7%);
     color: white;
     border: 0;
+}
+
+@media screen and (max-width: 960px) {
+    
+    .logo {
+        margin-inline: 20px;
+        width: fit-content;
+    }
+
+    .navbarLinks {
+        width: fit-content;
+        gap: 12px;
+    }
+
+    .navbarActions {
+        width: fit-content;
+        gap: 12px;
+    }
+
+    .trackShipmentAtive {
+        padding: 0;
+    }
+
+    .trackShipment {
+        padding-inline: 10px;
+    }
+
+    .trackShipmentSearch {
+        padding: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navbar {
+        height: 110px;
+    }
 }

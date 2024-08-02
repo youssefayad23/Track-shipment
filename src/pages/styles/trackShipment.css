@@ -39,8 +39,9 @@
 
 .shipmentHelp div p {
     margin: 8px;
-    
+
 }
+
 .shipmentHelp div button {
     width: 100%;
     background-color: rgb(96%, 0%, 2%);
@@ -50,4 +51,51 @@
     border: none;
     cursor: pointer;
     font-family: 'Cairo';
+}
+
+
+
+@media screen and (max-width: 950px) {
+    .TrackShipmentMain {
+        padding: 1rem 2rem;
+    }
+
+    .TrackShipmentContent {
+        flex-wrap: wrap;
+    }
+
+    .TrackShipmentTable {
+        width: 100%;
+    }
+
+    .shipmentAddressAndHelp {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+
+        h4 {
+            width: 100%;
+        }
+
+        .shipmentAddress {
+            width: 45%;
+        }
+
+        .shipmentHelp {
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .shipmentAddressAndHelp {
+        .shipmentAddress {
+            width: 90%;
+        }
+
+        .shipmentHelp {
+            width: 90%;
+        }
+    }
 }

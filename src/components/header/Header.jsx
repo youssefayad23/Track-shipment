@@ -6,17 +6,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import './header.css';
 import i18next from 'i18next';
 
-function Header() {
+function Header({setTrackingNumber}) {
   const { t } = useTranslation();
-  const [trackingNumber, setTrackingNumber] = useState(null);
+  const [searchNumber, setSearchNumber] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   function handleSearchSubmit(e) {
     e.preventDefault();
+    setTrackingNumber(searchNumber);
     setShowSearch(false);
-    setTrackingNumber(null);
-    navigate(`/shipments/track/${trackingNumber}`);
+    setSearchNumber(null);
+    //navigate(`/shipments/track/${trackingNumber}`);
   }
 
   return (
@@ -103,7 +104,7 @@ function Header() {
             }
             onClick={() => setShowSearch(true)}
           >
-            <label className="trackShipmentLabel" htmlFor="trackingNumber">
+            <label className="trackShipmentLabel" htmlFor="searchNumber">
               {t('trackShipment')}
             </label>
             {showSearch && (
@@ -119,11 +120,11 @@ function Header() {
                   >
                     <input
                       type="text"
-                      name="trackingNumber"
-                      id="trackingNumber"
+                      name="searchNumber"
+                      id="searchNumber"
                       placeholder={t('trackingNumber')}
                       onChange={(e) => {
-                        setTrackingNumber(e.target.value);
+                        setSearchNumber(e.target.value);
                       }}
                       onBlur={() =>
                         setTimeout(() => {

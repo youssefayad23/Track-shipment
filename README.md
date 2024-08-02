@@ -15,7 +15,7 @@ This React application tracks shipments using the Bosta API and displays the res
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/youssefayad23/Track-shipment-task.git
+   git clone https://github.com/youssefayad23/Track-shipment.git
    ```
 
 2. Install dependencies:
@@ -31,7 +31,11 @@ npm run dev
 ## Technologies Used
 
 - React
-- Redux
 - Axios
 - i18next
+- Material-ui
 - Cairo font
+
+## Demo
+
+https://66ad129b65041d8e6adccedf--dapper-cupcake-77a0ce.netlify.app/

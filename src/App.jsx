@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/header/Header';
+//import Header from './components/header/Header';
 import TrackShipment from './pages/TrackShipment';
 import { useEffect } from 'react';
 import i18next from 'i18next';
@@ -23,10 +23,11 @@ function App() {
   }, []);
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route
-          path="/shipments/track/:trackingNumber"
+          //path="/shipments/track/:trackingNumber"
+          path="/"
           element={<TrackShipment />}
         />
       </Routes>

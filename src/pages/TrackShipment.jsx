@@ -4,15 +4,18 @@ import Progress from '../components/progress/Progress';
 import ShipmentsTaple from '../components/shipmentsTaple/ShipmentsTaple';
 import { useTranslation } from 'react-i18next';
 import questions from '../assets/questions.png';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
+import Header from '../components/header/Header';
 
 //  84043113,
 // 3468570,
 // 40106705
 function TrackShipment() {
   const [shipmentData, setShipmentData] = useState(null);
-  const { trackingNumber } = useParams();
+  const [trackingNumber, setTrackingNumber] = useState('84043113');
+  //const { trackingNumber } = useParams();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -33,7 +36,9 @@ function TrackShipment() {
   //console.log(shipmentData)
 
   return (
-    shipmentData && (
+    <>
+      <Header setTrackingNumber={setTrackingNumber}/>
+      {shipmentData && (
       <main className="TrackShipmentMain">
         <Progress shipmentData={shipmentData} />
         <div className="TrackShipmentContent">
@@ -54,14 +59,17 @@ function TrackShipment() {
             <div className="shipmentHelp">
               <img src={questions} alt="Questions" />
               <div>
-                <p style={{ textAlign: 'center' }}> {t('problemWithShipment')}</p>
+                <p style={{ textAlign: 'center' }}>
+                  {t('problemWithShipment')}
+                </p>
                 <button>{t('reportProblem')}</button>
               </div>
             </div>
           </div>
         </div>
       </main>
-    )
+      )}
+    </>
   );
 }
 

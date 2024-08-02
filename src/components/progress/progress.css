@@ -64,30 +64,11 @@
 .progressBarData {
     padding-inline: 30px;
     display: flex;
-    color: black;
+    justify-content: space-between;
 
     p {
         font-weight: 700;
         margin-top: 5px;
-    }
-
-    p:first-child {
-        width: 280px;
-    }
-
-    p:nth-child(2) {
-        width: 300px;
-    }
-
-    p:nth-child(3) {
-        width: 280px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        span {
-            font-size: 14px;
-        }
     }
 }
 
@@ -138,4 +119,45 @@
     p:last-child {
         color: #9aa5b9;
     }
+}
+.outForDeliveryP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .progressData {
+        padding-inline: 10px;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .progressBar {
+        margin-top: 10px;
+        padding-inline: 5px;
+
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .progressData {
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 1rem;
+    }
+
+        .progressBarData {
+            padding-inline: 8px;
+            display: flex;
+            justify-content: space-between;
+    
+            p {
+                font-weight: 700;
+                margin: 5px;
+                text-align: center;
+                font-size: 10px;
+            }
+        }
 }

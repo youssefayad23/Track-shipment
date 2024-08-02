@@ -7,12 +7,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useTranslation } from 'react-i18next';
-import './shipmentsTaple.css';
 
 function ShipmentsTaple({ transitEvents, shipmentState }) {
   const { t } = useTranslation();
   const dir = localStorage.getItem('i18nextLng') === 'ar' ? 'right' : 'left';
- 
+
+  const rowStyle = { borderBottom: '1px solid #eeeeeec0', fontFamily: 'Cairo' };
 
   function getFormattedDate(date) {
     const convertedDate = new Date(date);
@@ -34,14 +34,70 @@ function ShipmentsTaple({ transitEvents, shipmentState }) {
   }
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }}>
+    <TableContainer
+      component={Paper}
+      sx={{ boxShadow: '0 0 0 0', border: '1px solid #eeeeeec0' }}
+    >
+      <Table sx={{ minWidth: 550 }}>
         <TableHead>
           <TableRow>
-            <TableCell align={dir}>{t('branch')}</TableCell>
-            <TableCell align={dir}>{t('date')}</TableCell>
-            <TableCell align={dir}>{t('time')}</TableCell>
-            <TableCell align={dir}>{t('details')}</TableCell>
+            <TableCell
+              sx={{
+                color: '#9aa5b9',
+                fontFamily: 'Cairo',
+                fontWeight: 700,
+                borderBottom: '1px solid #eeeeeec0',
+                bgcolor: '#f8f8f8',
+                py: 2,
+                px: 3,
+              }}
+              align={dir}
+            >
+              {t('branch')}
+            </TableCell>
+
+            <TableCell
+              sx={{
+                color: '#9aa5b9',
+                fontFamily: 'Cairo',
+                fontWeight: 700,
+                borderBottom: '1px solid #eeeeeec0',
+                bgcolor: '#f8f8f8',
+                py: 2,
+                px: 3,
+              }}
+              align={dir}
+            >
+              {t('date')}
+            </TableCell>
+            <TableCell
+              sx={{
+                color: '#9aa5b9',
+                fontFamily: 'Cairo',
+                fontWeight: 700,
+                borderBottom: '1px solid #eeeeeec0',
+                bgcolor: '#f8f8f8',
+                py: 2,
+                px: 3,
+              }}
+              align={dir}
+            >
+              {t('time')}
+            </TableCell>
+            <TableCell
+              sx={{
+                color: '#9aa5b9',
+                fontFamily: 'Cairo',
+                fontWeight: 700,
+                borderBottom: '1px solid #eeeeeec0',
+                bgcolor: '#f8f8f8',
+                py: 2,
+                px: 3,
+              }}
+              align={dir}
+            >
+              {t('details')}
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -50,22 +106,37 @@ function ShipmentsTaple({ transitEvents, shipmentState }) {
               key={index}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell align={dir}>
+              <TableCell sx={rowStyle} align={dir}>
                 {event?.hub ? event?.hub : t('nothing')}
               </TableCell>
-              <TableCell align={dir}>
+              <TableCell sx={rowStyle} align={dir}>
                 {getFormattedDate(event?.timestamp)}
               </TableCell>
-              <TableCell align={dir}>
+              <TableCell sx={rowStyle} align={dir}>
                 {getFormattedTime(event?.timestamp)}
               </TableCell>
               <TableCell
+                sx={rowStyle}
                 align={dir}
-                style={{ display: 'flex', flexDirection: 'column' }}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  borderBottom: '1px solid #eeeeeec0',
+                  fontFamily: 'Cairo',
+                }}
               >
-                <p>{t(event?.state)}</p>
+                <p
+                  style={{
+                    margin: 0,
+                  }}
+                >
+                  {t(event?.state)}
+                </p>
                 {event?.reason && (
                   <p
+                    style={{
+                      margin: 0,
+                    }}
                     className={
                       shipmentState === 'CANCELLED'
                         ? 'setColorRed'
