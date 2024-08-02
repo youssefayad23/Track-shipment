@@ -1,8 +1,37 @@
-# React + Vite
+# Bosta Shipment Tracking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React application tracks shipments using the Bosta API and displays the results in both English and Arabic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Tracks shipments by tracking number
+- Displays shipment details (status, origin, destination, date)
+- Supports English and Arabic languages
+- Fully responsive design
+- Uses Cairo font for text
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/youssefayad23/Track-shipment-task.git
+   ```
+
+2. Install dependencies:
+
+npm install
+
+## Usage
+
+1. Start the development server:
+
+npm run dev
+
+## Technologies Used
+
+- React
+- Redux
+- Axios
+- i18next
+- Cairo font

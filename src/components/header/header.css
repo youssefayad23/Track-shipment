@@ -1,0 +1,114 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.logo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbarLinks {
+    width: 37%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.navbarActions {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.language {
+    color: rgb(89%, 2%, 7%);
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Cairo';
+    border: 0;
+    background-color: transparent;
+}
+
+.trackShipment {
+    padding-inline: 20px;
+    border-left: 1px solid #f3f3f3;
+    position: relative;
+}
+
+.trackShipmentLabel {
+    cursor: pointer;
+}
+
+.trackShipmentAtive {
+    color: rgb(89%, 2%, 7%);
+    border: 1px solid #f3f3f3;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0;
+    padding: 15px;
+}
+
+.trackShipmentSearch {
+    border: 1px solid #f3f3f3;
+    border-radius: 0 10px 10px 0;
+    padding: 20px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 250px;
+    z-index: 1;
+
+    p {
+        margin: 5px;
+        font-size: 14px;
+        color: #9aa5b9;
+    }
+}
+
+.trackShipmentSearchInput {
+    display: flex;
+    align-items: center;
+
+    input {
+        height: 18px;
+        width: 100%;
+        border-radius: 0 5px 5px 0;
+        border: 0;
+        outline: none;
+        border: 1px solid #f3f3f3;
+        font-family: 'Cairo';
+        padding: 8px;
+        padding-bottom: 7px;
+        font-size: 10px;
+    }
+
+    input::placeholder {
+        color: #9aa5b9;
+        font-size: 12px;
+        opacity: 0.5;
+    }
+}
+
+.searchbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px !important;
+    width: 45px !important;
+    border-radius: 5px 0 0 5px;
+    background-color: rgb(89%, 2%, 7%);
+    color: white;
+    border: 0;
+}

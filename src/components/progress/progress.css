@@ -1,0 +1,141 @@
+.progressContainer {
+    border: 1px solid #eeeeeec0;
+    border-radius: 10px;
+}
+
+.progressData {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px 70px;
+    border-bottom: 1px solid #eeeeeec0;
+
+    h5 {
+        color: #9aa5b9;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.progressBar {
+    margin-top: 30px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkCircleIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.imgContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eeeeeec0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: #ffffff;
+    padding-inline: 10px 0px;
+
+    img {
+        width: 30px;
+        height: 25px;
+    }
+}
+
+.progressDiv {
+    width: calc(100% / 2.5);
+    height: 5px;
+    margin-inline: -12px;
+    background-color: #eeeeeec0;
+    z-index: -1;
+}
+
+.progressBarData {
+    padding-inline: 30px;
+    display: flex;
+    color: black;
+
+    p {
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    p:first-child {
+        width: 280px;
+    }
+
+    p:nth-child(2) {
+        width: 300px;
+    }
+
+    p:nth-child(3) {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        span {
+            font-size: 14px;
+        }
+    }
+}
+
+.delivered {
+    color: #2bc22b;
+}
+
+.cancelled {
+    color: red;
+}
+
+.deliveredToSender {
+    color: #ffbb00;
+}
+
+.setBackgroundGreen {
+    background-color: green;
+}
+
+.setBackgroundRed {
+    background-color: red;
+    border: red;
+}
+
+.setBackgroundOrange {
+    background-color: orange;
+    border: orange;
+}
+
+.setColorGreen {
+    color: green;
+}
+
+.setColorRed {
+    color: red;
+}
+
+.setColorOrange {
+    color: orange;
+}
+
+.setColorBlack {
+    color: black;
+}
+
+
+.cancelledOrdeliveredToSenderForP {
+    p:last-child {
+        color: #9aa5b9;
+    }
+}

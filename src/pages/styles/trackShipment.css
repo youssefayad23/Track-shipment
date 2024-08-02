@@ -1,0 +1,53 @@
+.TrackShipmentMain {
+    padding: 3rem 6rem;
+}
+
+.TrackShipmentContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.TrackShipmentTable {
+    width: 70%;
+}
+
+.shipmentAddressAndHelp {
+    width: 30%;
+}
+
+.shipmentAddress {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    padding: 1rem;
+}
+
+.shipmentHelp {
+    border: 1px solid #ebe9e9;
+    border-radius: 10px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+}
+
+.shipmentHelp img {
+    width: 100px;
+    height: 110px;
+}
+
+.shipmentHelp div p {
+    margin: 8px;
+    
+}
+.shipmentHelp div button {
+    width: 100%;
+    background-color: rgb(96%, 0%, 2%);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cairo';
+}
